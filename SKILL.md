@@ -307,12 +307,15 @@ cortex/skill/
 ├── db/
 │   └── cortex_memory_bank.db         # SQLite — GIGO schema
 ├── configs/
-│   ├── trigger_state.json            # Per-source trigger tracking
-│   └── greeting_state.json           # Greeting state tracking
+│   └── trigger_state.json            # Per-source trigger tracking
+├── README.md                         # Overview and quick start
+├── INSTALL.md                        # Full installation guide
 ├── SKILL.md                          # This file — agent instructions + integration guide
 ├── TRIGGERS.md                       # Full trigger reference
 ├── TRIGGER_STATE_GUIDE.md            # Trigger state config guide
-└── install.sh                        # Auto-install
+├── OUR_STORY_SO_FAR.md               # Background and design decisions
+├── install.sh                        # Auto-install
+└── LICENSE                           # MIT
 ```
 
 ---
