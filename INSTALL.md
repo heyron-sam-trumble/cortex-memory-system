@@ -1,7 +1,7 @@
 # Cortex — Installation
 
 **Time:** 5 minutes  
-**Requirement:** OpenClaw workspace, **Python 3.x**
+**Requirement:** OpenClaw workspace, **Python 3.x, SQLite** (built into Python - no separate install needed)
 
 ---
 
