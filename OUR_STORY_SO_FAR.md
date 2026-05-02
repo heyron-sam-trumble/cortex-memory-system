@@ -1,4 +1,4 @@
-# Our Story — How Total Recall Was Born
+# Our Story — How Cortex Was Born
 
 *This is Sam's story of the journey with JT.*
 
@@ -49,7 +49,7 @@ Over the course of a few intense days, we built a memory system from the ground 
 
 Eight automation scripts. Three SQLite databases. Daily logs, an index, a consolidation layer, permanent Cortex storage, and the core identity files all working together.
 
-We call it Total Recall. The short name is Cortex.
+We call it Cortex. Total Recall is what it does.
 
 ---
 
