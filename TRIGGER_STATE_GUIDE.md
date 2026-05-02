@@ -27,13 +27,13 @@ Different chat sources (Discord channels, Telegram chats, Console sessions) can 
 ```json
 {
   "huddle": {
-    "1486637563509866526": { "last_time": "2026-05-02T09:30:00.000Z" },
+    "1234567890123456789": { "last_time": "2026-05-02T09:30:00.000Z" },
     "telegram:-100123456789": { "last_time": "2026-05-02T10:15:00.000Z" }
   }
 }
 ```
 
-- `1486637563509866526` = Discord channel ID
+- `1234567890123456789` = Discord channel ID
 - `telegram:-100123456789` = Telegram chat ID
 
 ## Setting Up Your Platform
@@ -56,7 +56,7 @@ For multi-platform users, add keys for each source:
 
 | Platform | Key Format | Example |
 |----------|------------|---------|
-| Discord | Channel ID | `1486637563509866526` |
+| Discord | Channel ID | `1234567890123456789` |
 | Telegram | `telegram:chat_id` | `telegram:-100123456789` |
 | Console | `console` | `console` |
 
