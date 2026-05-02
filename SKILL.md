@@ -22,6 +22,13 @@ This naming convention is not optional. The session startup loader, the 7-day wi
 
 When writing a new daily log entry, always check today's date and use it exactly. Do not reuse yesterday's file.
 
+**Requirements**
+
+The following must be available in your workspace:
+
+ - **Python 3.x** — required to run query_cortex.py and memory_log_sync_to_cortex.py
+ - **SQLite** — built into Python's standard library, no separate install needed
+
 ---
 
 ## Session Start — Do This Every Time
