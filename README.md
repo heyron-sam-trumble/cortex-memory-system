@@ -1,4 +1,4 @@
-# Total Recall - the Cortex Memory System
+# Cortex — the Total Recall Memory System
 
 **Drop-in memory system for AI agents — remembers between sessions.**
 
@@ -34,14 +34,14 @@ Every chat, your AI forgets everything. Cortex solves this with a two-layer memo
 
 ```bash
 # 1. Copy skill to workspace
-cp -r skill/ /path/to/your/workspace/projects/
+cp -r skill/ ~/workspace/cortex/skill/
 
 # 2. Run installer
-cd your-workspace
+cd ~/workspace
 chmod +x cortex/skill/install.sh
 ./cortex/skill/install.sh
 
-# 3. Copy memory rules into your AGENTS.md (see templates/04_agents_template.md)
+# 3. Copy memory rules into your AGENTS.md (see SKILL.md)
 ```
 
 That's it. See [INSTALL.md](INSTALL.md) for full details.
@@ -137,7 +137,7 @@ Cortex DB uses SQLite with GIGO schema. The included `cortex_memory_bank.db` has
 
 1. Copy `skill/` to your workspace
 2. Run `install.sh`
-3. Open `templates/04_agents_template.md` and copy the memory rules into your existing `AGENTS.md`
+3. Open `SKILL.md` and copy the memory rules from the Integrating with Your `AGENTS.md` section into your existing `AGENTS.md`
 4. Restart your agent (to load new rules)
 5. In chat, use triggers to create GIGO entries:
    - `log this: [info]` — saves single entry
@@ -151,5 +151,5 @@ Cortex DB uses SQLite with GIGO schema. The included `cortex_memory_bank.db` has
 
 ---
 
-*Total Recall — Cortex Memory System 🧠*
+*Cortex — the Total Recall Memory System 🧠*
 *Built for Heyron.ai Agent Jam #1 - May 2026*
