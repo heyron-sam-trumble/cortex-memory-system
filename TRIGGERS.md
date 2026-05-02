@@ -1,4 +1,4 @@
-# Total Recall (Cortex) — Triggers
+# Cortex — Triggers
 
 **The memory system that learns and grows.**
 
@@ -6,7 +6,7 @@
 
 ## Architecture
 
-Total Recall (Cortex) is a two-layer memory system:
+Cortex is a two-layer memory system:
 
 | Layer | Storage | Purpose |
 |-------|---------|---------|
@@ -38,7 +38,7 @@ Total Recall (Cortex) is a two-layer memory system:
 **Save to daily memory with GIGO format.**
 
 ```
-log this: Found great supplier for paint rebrand
+log this: Jane found great API documentation site today
 ```
 
 → Saves to today's log in GIGO format: Context, Why, What, Decision, Outcome
@@ -81,7 +81,7 @@ The Cortex database uses GIGO format:
 
 ## Setup
 
-Open `templates/04_agents_template.md` and copy the relevant sections into your existing `AGENTS.md`. At minimum, add:
+Open `SKILL.md` and copy the memory rules from the Integrating with Your `AGENTS.md` section into your existing `AGENTS.md`. At minimum, add:
 
 - **Memory Startup** — loads last 7 days + MEMORY.md at session start
 - **User Triggers** — log this:, huddle, sync, full sync
@@ -115,4 +115,4 @@ For trigger state tracking (prevents duplicate entries), see [TRIGGER_STATE_GUID
 
 ---
 
-*Total Recall — Cortex Memory System 🧠*
+*Cortex — the Total Recall Memory System 🧠*
