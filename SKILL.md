@@ -1,4 +1,4 @@
-# Total Recall — Cortex Memory Skill
+# Cortex — Total Recall Memory Skill
 
 **You are an agent with persistent memory. This skill tells you how to use it.**
 
@@ -349,5 +349,5 @@ chmod +x cortex/skill/install.sh
 
 ---
 
-*Total Recall — Cortex Memory System 🧠*
+*Cortex — the Total Recall Memory System 🧠*
 *Built for Heyron Agent Jam #1 — May 2026*
