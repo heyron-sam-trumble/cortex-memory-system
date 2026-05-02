@@ -72,10 +72,6 @@ The Cortex database uses GIGO format:
 | outcome | TEXT | What actually happened |
 | source_log | TEXT | Which memory file this came from |
 | stored_at | TEXT | Timestamp when inserted into Cortex DB |
-| retrieved_count | INTEGER | How many times this entry has been queried |
-| last_retrieved_at | TEXT | Timestamp of last retrieval |
-| promoted | INTEGER | Whether entry has been promoted (0/1) |
-| promoted_to | TEXT | Destination if promoted |
 
 ---
 
