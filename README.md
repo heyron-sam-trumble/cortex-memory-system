@@ -38,8 +38,8 @@ cp -r skill/ /path/to/your/workspace/projects/
 
 # 2. Run installer
 cd your-workspace
-chmod +x projects/agent-jam-1/skill/install.sh
-./projects/agent-jam-1/skill/install.sh
+chmod +x cortex/skill/install.sh
+./cortex/skill/install.sh
 
 # 3. Copy memory rules into your AGENTS.md (see templates/04_agents_template.md)
 ```
@@ -64,24 +64,23 @@ That's it. See [INSTALL.md](INSTALL.md) for full details.
 ## What's Included
 
 ```
-skill/
+cortex-memory-system/
 ├── scripts/
-│   ├── huddle.cjs                    # Session summaries
-│   ├── memory_log_sync_to_cortex.py  # Weekly sync
-│   └── query_cortex.py               # Query long-term memory
+│   ├── huddle.cjs
+│   ├── memory_log_sync_to_cortex.py
+│   └── query_cortex.py
 ├── db/
-│   └── cortex_memory_bank.db         # SQLite with GIGO schema
+│   └── cortex_memory_bank.db
 ├── configs/
-│   └── trigger_state.json            # Per-source trigger tracking
-├── templates/
-│   ├── 01_triggers_template.md       # Trigger reference
-│   ├── 02_greeting_state_template.md # Greeting state config
-│   ├── 03_memory_template.md         # Memory structure reference
-│   └── 04_agents_template.md         # Memory rules to merge into your AGENTS.md
-├── TRIGGERS.md                       # Trigger documentation
-├── TRIGGER_STATE_GUIDE.md            # Config guide
-├── install.sh                        # Auto-install
-└── LICENSE                           # MIT
+│   └── trigger_state.json
+├── README.md
+├── INSTALL.md
+├── SKILL.md
+├── TRIGGERS.md
+├── TRIGGER_STATE_GUIDE.md
+├── OUR_STORY_SO_FAR.md
+├── install.sh
+└── LICENSE
 ```
 
 ---
