@@ -9,12 +9,12 @@
 
 ```bash
 # 1. Copy skill folder to workspace
-cp -r skill/ /path/to/your/workspace/projects/agent-jam-1/
+cp -r skill/ /path/to/your/workspace/cortex/
 
 # 2. Run installer
 cd /path/to/your/workspace
-chmod +x projects/agent-jam-1/skill/install.sh
-./projects/agent-jam-1/skill/install.sh
+chmod +x cortex/skill/install.sh
+./cortex/skill/install.sh
 
 # 3. Copy memory rules into your AGENTS.md (see templates/04_agents_template.md)
 ```
