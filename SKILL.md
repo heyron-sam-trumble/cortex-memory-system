@@ -1,4 +1,4 @@
-# Cortex — Total Recall Memory Skill
+# Total Recall — Cortex Memory Skill
 
 **You are an agent with persistent memory. This skill tells you how to use it.**
 
@@ -21,13 +21,6 @@ Examples: `memory/2026-05-02.md`, `memory/2026-04-28.md`
 This naming convention is not optional. The session startup loader, the 7-day window calculation, and the `cortex backup` sync script all parse filenames to determine dates. A file named anything else — `today.md`, `log-02-05.md`, `notes.md` — will be silently ignored by every part of the system.
 
 When writing a new daily log entry, always check today's date and use it exactly. Do not reuse yesterday's file.
-
-**Requirements**
-
-The following must be available in your workspace:
-
- - **Python 3.x** — required to run query_cortex.py and memory_log_sync_to_cortex.py
- - **SQLite** — built into Python's standard library, no separate install needed
 
 ---
 
@@ -122,17 +115,19 @@ If an entry does not have a clear Decision or Outcome yet, write `Pending` — d
 
 ---
 
-## Proactive Cortex Queries — When to Do This Without Being Asked
+## Memory Recall Order — When to Do This Without Being Asked
 
-Query the Cortex database on your own when:
+When context is fuzzy or detail is missing, follow this order exactly — stop as soon as you have enough:
 
-- The user references something from more than 7 days ago
-- You are in a cold start with no recent memory loaded
-- Context is fuzzy and you suspect there is more
+1. **Loaded `MEMORY.md`** — already in context at startup; check here first
+2. **Loaded 7-day files** — `memory/YYYY-MM-DD.md` already loaded at startup; check these next
+3. **Cortex DB** — if still missing, query:
 
 ```bash
 python3 scripts/query_cortex.py "search term"
 ```
+
+**Never search `memory/archive/`** unless the user explicitly asks. Archive files are cold storage — their content has already been extracted to Cortex DB by `cortex backup`. Searching archives directly bypasses the recall hierarchy, risks surfacing superseded context, and duplicates what Cortex already holds. If the answer isn't in MEMORY.md or the recent logs, Cortex is the next and only step.
 
 The script searches across four fields: `topic`, `context`, `what_we_tried`, and `outcome`. It does not search `why_it_matters` or `decision`. Choose search terms that are likely to appear in those four fields — the topic label, what actually happened, or what the outcome was. Searching for a decision keyword alone will not match unless that word also appears elsewhere in the entry.
 
@@ -186,18 +181,19 @@ At session start, load:
 | `cortex check` | Before backup | Preview what would sync (dry-run) |
 ```
 
-### Cortex Query Logic
+### Memory Recall Order
 
 ```markdown
-## Cortex Query Logic
+## Memory Recall Order
 
-Query Cortex DB when:
-- Context is fuzzy — needs enrichment
-- Cold start — no recent memory, needs history
-- User asks about decisions or topics from more than 7 days ago
+When context is fuzzy or detail is missing, follow this order — stop as soon as you have enough:
+1. Loaded MEMORY.md — check here first
+2. Loaded 7-day files — check these next
+3. Cortex DB — if still missing: python3 scripts/query_cortex.py "<search_term>"
 
-Query command:
-    python3 scripts/query_cortex.py "<search_term>"
+Never search memory/archive/ unless the user explicitly asks. Archive files are cold storage —
+their content has already been extracted to Cortex DB by cortex backup. Searching archives
+directly bypasses the recall hierarchy and risks surfacing superseded context.
 
 This is proactive agent behaviour, not a user command. Use results naturally.
 ```
@@ -356,5 +352,5 @@ chmod +x cortex/skill/install.sh
 
 ---
 
-*Cortex — the Total Recall Memory System 🧠*
+*Total Recall — Cortex Memory System 🧠*
 *Built for Heyron Agent Jam #1 — May 2026*
